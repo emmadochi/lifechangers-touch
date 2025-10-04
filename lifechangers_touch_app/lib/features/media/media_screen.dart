@@ -65,6 +65,12 @@ class _MediaScreenState extends State<MediaScreen> with TickerProviderStateMixin
             icon: const Icon(Icons.filter_list),
             onPressed: _showFilterBottomSheet,
           ),
+          IconButton(
+            icon: const Icon(Icons.person_outline),
+            onPressed: () {
+              context.push(RouteNames.profile);
+            },
+          ),
         ],
         bottom: TabBar(
           controller: _tabController,

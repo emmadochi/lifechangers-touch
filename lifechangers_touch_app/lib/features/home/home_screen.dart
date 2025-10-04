@@ -30,6 +30,12 @@ class _HomeScreenState extends State<HomeScreen> {
               context.push(RouteNames.walletDashboard);
             },
           ),
+          IconButton(
+            icon: const Icon(Icons.person_outline),
+            onPressed: () {
+              context.push(RouteNames.profile);
+            },
+          ),
         ],
       ),
       body: SingleChildScrollView(

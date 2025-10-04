@@ -82,6 +82,12 @@ class _GiveScreenState extends State<GiveScreen> with TickerProviderStateMixin {
             onPressed: _showSettings,
             icon: const Icon(Icons.settings),
           ),
+          IconButton(
+            icon: const Icon(Icons.person_outline),
+            onPressed: () {
+              context.push(RouteNames.profile);
+            },
+          ),
         ],
         bottom: TabBar(
           controller: _tabController,

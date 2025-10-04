@@ -46,6 +46,12 @@ class _ConnectScreenState extends State<ConnectScreen> with TickerProviderStateM
               _showSearchDialog();
             },
           ),
+          IconButton(
+            icon: const Icon(Icons.person_outline),
+            onPressed: () {
+              context.push(RouteNames.profile);
+            },
+          ),
         ],
         bottom: TabBar(
           controller: _tabController,

@@ -9,7 +9,6 @@ import '../../features/auth/email_verification_screen.dart';
 import '../../features/home/home_screen.dart';
 import '../../features/media/media_screen.dart';
 import '../../features/connect/connect_screen.dart';
-import '../../features/profile/profile_screen.dart';
 import '../../features/onboarding/onboarding_screen.dart';
 import '../../features/onboarding/feature_selection_screen.dart';
 import '../../features/onboarding/permissions_screen.dart';
@@ -274,9 +273,9 @@ class AppRouter {
             builder: (context, state) => const ConnectScreen(),
           ),
           GoRoute(
-            path: RouteNames.profile,
-            name: 'profile',
-            builder: (context, state) => const ProfileScreen(),
+            path: RouteNames.give,
+            name: 'give',
+            builder: (context, state) => const GiveScreen(),
           ),
         ],
       ),
@@ -545,9 +544,9 @@ class _MainAppShell extends StatelessWidget {
             label: 'Connect',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            activeIcon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.favorite_outline),
+            activeIcon: Icon(Icons.favorite),
+            label: 'Give',
           ),
         ],
       ),
@@ -559,7 +558,7 @@ class _MainAppShell extends StatelessWidget {
     if (location == RouteNames.home) return 0;
     if (location == RouteNames.media) return 1;
     if (location == RouteNames.connect) return 2;
-    if (location == RouteNames.profile) return 3;
+    if (location == RouteNames.give) return 3;
     return 0;
   }
 
@@ -575,7 +574,7 @@ class _MainAppShell extends StatelessWidget {
         context.go(RouteNames.connect);
         break;
       case 3:
-        context.go(RouteNames.profile);
+        context.go(RouteNames.give);
         break;
     }
   }
