@@ -9,6 +9,7 @@ import '../../features/auth/email_verification_screen.dart';
 import '../../features/home/home_screen.dart';
 import '../../features/media/media_screen.dart';
 import '../../features/connect/connect_screen.dart';
+import '../../features/profile/profile_screen.dart';
 import '../../features/onboarding/onboarding_screen.dart';
 import '../../features/onboarding/feature_selection_screen.dart';
 import '../../features/onboarding/permissions_screen.dart';
@@ -203,6 +204,11 @@ class AppRouter {
       ),
       
       // Settings & Profile Routes
+      GoRoute(
+        path: RouteNames.profile,
+        name: 'profile',
+        builder: (context, state) => const ProfileScreen(),
+      ),
       GoRoute(
         path: RouteNames.settings,
         name: 'settings',
